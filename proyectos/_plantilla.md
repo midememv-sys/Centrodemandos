@@ -2,7 +2,7 @@
 
 donde: claude | chatgpt
 enlace: ?
-area: BASTO | Trabajo | Negocios IA | Herramientas propias | Personal
+area: BASTO | Indiana | Trabajo | Negocios IA | Herramientas propias | Personal | Seguimientos
 estado: activo | pausado | terminado
 foco: no
 fecha_limite: ?
