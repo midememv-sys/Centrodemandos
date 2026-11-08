@@ -9,3 +9,4 @@
 2026-11-08 02:44 · claude · diario/2026-11-09.md creado desde la plantilla con ⭐ Concretar UPV (ics → Calendar, avisos PoliformaT en Gmail, notas, guía de Italiano)
 2026-11-08 02:48 · claude · ASIGNATURAS.md: notas reales del 1er cuatri; ESTADO regenerado
 2026-11-08 02:50 · claude · METAS M2: submeta → Semanas con ≥ 5 sesiones (fútbol + gym), actual 5, objetivo 30; regla gym → jueves con 2 días sin gym → viernes y sábado; ESTADO regenerado
+2026-11-08 02:52 · claude · diario 2026-11-08: tarea 3 (asignaturas en METAS/ASIGNATURAS) marcada como hecha; ⭐ y gym siguen abiertas
