@@ -16,3 +16,4 @@
 2026-11-08 18:27 · claude · proyectos/seguimiento-ecc.md creado (sin datos del Excel); candado ECC en AGENTS.md; ESTADO regenerado
 2026-11-08 23:36 · claude · seguimiento-ecc: relacion_con_claude rellenada
 2026-11-08 23:41 · claude · /cierre hecho
+2026-11-08 23:49 · claude · AGENTS: agenda/citas las lleva Jenda (no crear eventos); basto-evento-2026-11-28: +2 submetas (reunión Jordan y Nando, publi con Sobremesa); ESTADO regenerado

@@ -7,6 +7,7 @@ Bruno Miranda. Estudiante de 2º de GITI (UPV, Valencia). Trabaja jueves y viern
 - Español, muy conciso, sin relleno. Primero la respuesta.
 - Nunca inventes datos ni porcentajes. Si falta un dato, pregúntalo o pon `?`.
 - Máximo 3 tareas por día y 1 destacada (⭐).
+- El centro de mandos es solo proyectos y objetivos. Agenda, citas y horarios los lleva Jenda: no crear eventos ni bloqueos.
 
 ## Archivos
 | Archivo | Qué es | Quién lo edita |

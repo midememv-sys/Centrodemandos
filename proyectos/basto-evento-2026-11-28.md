@@ -15,3 +15,5 @@ relacion_con_claude: Seguimiento desde el centro de mandos.
 |---|---|---|
 | Cerrar salida | 3 | no |
 | Organizar equipo | 3 | no |
+| Proponer reunión a Jordan y a Nando | 2 | no |
+| Coordinar salida de publi de BASTO con Sobremesa | 3 | no |
