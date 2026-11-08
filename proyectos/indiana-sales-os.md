@@ -2,7 +2,7 @@
 
 donde: chatgpt
 enlace: ?
-area: Trabajo
+area: Indiana
 estado: pausado
 foco: no
 fecha_limite: ?

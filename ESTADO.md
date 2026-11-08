@@ -35,21 +35,24 @@ _Generado por scripts/progreso.py — no editar a mano._
 ## Proyectos
 | | Proyecto | Área | Progreso | Ritmo | Dónde | Próximo paso |
 |---|---|---|---|---|---|---|
+| ⭐ | BASTO · primer evento 28/11 | BASTO | ░░░░░░ hecho 0 % | 🟡 · 20 d | claude | Cerrar la salida. |
+| ⭐ | Indiana · fiesta jueves 13/11 | Indiana | sin datos | ⚪ · 5 d | claude | ? |
 |  | BASTO - identidad visual y flyers | BASTO | ▓▓▓▓▓░ faltan 15 % | 🟢 | chatgpt | Consolidar logos, mascota, tipografías y flyers en un paquete maestro reutilizable. |
-|  | BASTO Valencia - marca y eventos | BASTO | ▓▓▓░░░ faltan 46 % | 🔴 · 5 d | chatgpt | Cerrar los preparativos y materiales del evento de presentación del 13 de noviembre. |
+|  | BASTO Valencia - marca y eventos | BASTO | ▓▓▓░░░ hecho 42 % | 🟢 | chatgpt | Cerrar el primer evento del 28/11 (ver basto-evento-2026-11-28.md). |
 |  | AGENTE 002 - Jenda | Herramientas propias | ▓▓░░░░ hecho 40 % | 🟢 | chatgpt | Resolver el Gateway y el estado compartido para que ChatGPT pueda operar sobre el calendario existente. |
 |  | Sprint UPV | Herramientas propias | ▓▓▓▓░░ faltan 36 % | 🟢 | chatgpt | Probar Sprint UPV en iPad y cargar el temario actualizado de Matemáticas III. |
+|  | Indiana · equipo | Indiana | sin datos | ⚪ | claude | ? |
 |  | Amazon KDP - Cuaderno Claro | Negocios IA | ▓▓▓░░░ faltan 50 % | 🟢 | chatgpt | Revisar el libro 2, Presupuestos para jornadas, y dejar sus archivos finales listos para publicación autorizada. |
 |  | CLIPP.EDITS - Work Business | Negocios IA | ▓▓▓▓░░ faltan 40 % | 🟢 | chatgpt | Resolver requisitos y permisos de SkiiMaskTimmy; mantener seguimiento de CaseOh, Reach y Clipping Culture. |
 |  | Drop Boss - dropshipping | Negocios IA | ▓▓▓░░░ faltan 50 % | 🟢 | chatgpt | Cerrar la selección de un producto y diseñar pruebas orgánicas de hooks para un avatar específico. |
 |  | OP BUILDER - sistema gestor | Negocios IA | ▓▓▓▓▓░ faltan 20 % | 🟢 | chatgpt | Priorizar la ejecución comercial de los activos digitales ya seleccionados frente a la construcción de más infraestructura. |
 |  | Tienda de plantillas digitales | Negocios IA | ▓▓░░░░ hecho 38 % | 🟢 | chatgpt | Verificar y completar el XLSX del Christmas & Holiday Party Planner, incluidas fórmulas, protección y ficha comercial. |
 |  | AGENTE 001 - Context Bridge | Herramientas propias | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Ejecutar una transferencia completa de BASTO y comparar la recuperación de contexto en ambas plataformas. |
+|  | Indiana - Sales OS | Indiana | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Verificar el acceso a los datos comerciales de Fourvenues antes de desarrollar la siguiente versión. |
 |  | AGENTE 003 - Business Hunter | Negocios IA | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Revisar la validación pendiente de Justifica Falla antes de autorizar su construcción. |
 |  | AGENTE 004 - Automation Hunter | Negocios IA | ▓▓▓▓▓░ faltan 21 % | ⏸ | chatgpt | Validar Sprint UPV en iPad y decidir si continuar con las siguientes automatizaciones. |
 |  | AGENTE 005 - Venture Operator | Negocios IA | ▓▓▓▓▓░ faltan 21 % | ⏸ | chatgpt | Mantener V0.2 congelada hasta disponer de una oportunidad con señales de demanda verificables. |
 |  | AGENTE 006 - YouTube Clipper | Negocios IA | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Desbloquear una fuente con permisos suficientes antes de retomar las pruebas sobre directos reales. |
 |  | Video Venture - tutoriales originales | Negocios IA | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Mantener el NO-GO público hasta resolver las limitaciones de producción detectadas en M015. |
-|  | Indiana - Sales OS | Trabajo | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Verificar el acceso a los datos comerciales de Fourvenues antes de desarrollar la siguiente versión. |
 
-_9 activos · 7 pausados · 0 en foco (máx. 3)_
+_12 activos · 7 pausados · 2 en foco (máx. 3)_
