@@ -13,3 +13,4 @@
 2026-11-08 17:49 · claude · Fase 2: proyectos/ (16 fichas + plantilla + LEEME), scripts/progreso.py con % de proyectos, skill /estado (.claude y .agents), AGENTS.md actualizado; ESTADO regenerado
 2026-11-08 18:13 · claude · Fase 2b: proyectos nuevos (BASTO evento 28/11, Indiana fiesta 13/11, Indiana equipo); BASTO Valencia y Indiana Sales OS sobrescritos; ESTADO regenerado
 2026-11-08 18:15 · claude · proyectos/_plantilla.md: áreas BASTO | Indiana | Trabajo (Transvia) | Negocios IA | Herramientas propias | Personal | Seguimientos
+2026-11-08 18:27 · claude · proyectos/seguimiento-ecc.md creado (sin datos del Excel); candado ECC en AGENTS.md; ESTADO regenerado

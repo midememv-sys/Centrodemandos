@@ -37,6 +37,7 @@ _Generado por scripts/progreso.py — no editar a mano._
 |---|---|---|---|---|---|---|
 | ⭐ | BASTO · primer evento 28/11 | BASTO | ░░░░░░ hecho 0 % | 🟡 · 20 d | claude | Cerrar la salida. |
 | ⭐ | Indiana · fiesta jueves 13/11 | Indiana | sin datos | ⚪ · 5 d | claude | ? |
+| ⭐ | Seguimiento ECC | Seguimientos | ░░░░░░ hecho 0 % | 🟢 | claude | Crear el Proyecto en Claude y analizar el primer Excel. |
 |  | BASTO - identidad visual y flyers | BASTO | ▓▓▓▓▓░ faltan 15 % | 🟢 | chatgpt | Consolidar logos, mascota, tipografías y flyers en un paquete maestro reutilizable. |
 |  | BASTO Valencia - marca y eventos | BASTO | ▓▓▓░░░ hecho 42 % | 🟢 | chatgpt | Cerrar el primer evento del 28/11 (ver basto-evento-2026-11-28.md). |
 |  | AGENTE 002 - Jenda | Herramientas propias | ▓▓░░░░ hecho 40 % | 🟢 | chatgpt | Resolver el Gateway y el estado compartido para que ChatGPT pueda operar sobre el calendario existente. |
@@ -55,4 +56,4 @@ _Generado por scripts/progreso.py — no editar a mano._
 |  | AGENTE 006 - YouTube Clipper | Negocios IA | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Desbloquear una fuente con permisos suficientes antes de retomar las pruebas sobre directos reales. |
 |  | Video Venture - tutoriales originales | Negocios IA | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Mantener el NO-GO público hasta resolver las limitaciones de producción detectadas en M015. |
 
-_12 activos · 7 pausados · 2 en foco (máx. 3)_
+_13 activos · 7 pausados · 3 en foco (máx. 3)_
