@@ -6,7 +6,7 @@ Formato de cabecera: `## M# · nombre · peso N · inicio → fin`. No cambies l
 ## M1 · Aprobar todo · peso 3 · 2026-09-01 → 2027-07-15
 | Submeta | Peso | Inicio | Actual | Objetivo | Hecho cuando |
 |---|---|---|---|---|---|
-| Asignaturas del 1er cuatri aprobadas | 2 | 0 | 0 | ? | Todas con nota ≥ 5 en el acta |
+| Asignaturas del 1er cuatri aprobadas | 2 | 0 | 0 | 6 | Todas con nota ≥ 5 en el acta (Termodinámica, Matemáticas III, Física III, Ciencia de Materiales, Fundamentos de Organización de Empresas, Italiano) |
 | Asignaturas del 2º cuatri aprobadas | 2 | 0 | 0 | ? | Todas con nota ≥ 5 en el acta |
 | Prácticas entregadas | 1 | 0 | ? | ? | Todas entregadas a tiempo |
 
@@ -17,7 +17,7 @@ Si → entonces:
 ## M2 · Gimnasio y perder 15 kg · peso 2 · 2026-09-01 → 2027-06-30
 | Submeta | Peso | Inicio | Actual | Objetivo | Hecho cuando |
 |---|---|---|---|---|---|
-| Peso corporal (kg) | 3 | 113 | ? | 98 | Báscula ≤ 98 kg |
+| Peso corporal (kg) | 3 | 113 | 107 | 98 | Báscula ≤ 98 kg |
 | Semanas con ≥ 3 sesiones de gym | 1 | 0 | ? | 30 | 30 semanas cumplidas |
 
 Si → entonces:
@@ -27,7 +27,7 @@ Si → entonces:
 ## M3 · Ahorrar 1.000 € · peso 1 · 2026-09-01 → 2027-06-30
 | Submeta | Peso | Inicio | Actual | Objetivo | Hecho cuando |
 |---|---|---|---|---|---|
-| Ahorrado (€) | 1 | 0 | ? | 1000 | 1.000 € en la cuenta de ahorro |
+| Ahorrado (€) | 1 | 0 | 0 | 1000 | 1.000 € en la cuenta de ahorro |
 
 Si → entonces:
 - Si cobro → paso 80 € al ahorro ese mismo día.
