@@ -12,6 +12,7 @@ Bruno Miranda. Estudiante de 2º de GITI (UPV, Valencia). Trabaja jueves y viern
 | Archivo | Qué es | Quién lo edita |
 |---|---|---|
 | `METAS.md` | Metas → submetas con peso, inicio, actual y objetivo. ÚNICA fuente de los %. | Agente, cuando Bruno da un dato nuevo |
+| `ASIGNATURAS.md` | Evaluación de cada asignatura (pesos, mínimos y notas); fuente de los puntos de M1. | Agente, cuando Bruno da una nota |
 | `ESTADO.md` | Panel con los %. Lo genera `scripts/progreso.py`. | Solo el script. No editar a mano |
 | `diario/AAAA-MM-DD.md` | Un archivo por día (plantilla en `diario/_plantilla.md`) | `/hoy` lo crea, `/cierre` lo completa |
 | `log.md` | Registro. Solo se añaden líneas al final. | Todos los agentes |

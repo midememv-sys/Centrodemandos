@@ -2,16 +2,18 @@
 
 Reglas: máximo 3 metas activas. Rellena los `?` cuando tengas el dato (o deja que `/hoy` te los pida).
 Formato de cabecera: `## M# · nombre · peso N · inicio → fin`. No cambies las columnas de las tablas: el script las lee.
+`auto:C1` = lo calcula el script a partir de las notas de ASIGNATURAS.md (puntos hacia el 5 en cada asignatura del 1er cuatri).
 
 ## M1 · Aprobar todo · peso 3 · 2026-09-01 → 2027-07-15
 | Submeta | Peso | Inicio | Actual | Objetivo | Hecho cuando |
 |---|---|---|---|---|---|
-| Asignaturas del 1er cuatri aprobadas | 2 | 0 | 0 | 6 | Todas con nota ≥ 5 en el acta (Termodinámica, Matemáticas III, Física III, Ciencia de Materiales, Fundamentos de Organización de Empresas, Italiano) |
-| Asignaturas del 2º cuatri aprobadas | 2 | 0 | 0 | ? | Todas con nota ≥ 5 en el acta |
-| Prácticas entregadas | 1 | 0 | ? | ? | Todas entregadas a tiempo |
+| Puntos hacia el 5 · 1er cuatri | 3 | 0 | auto:C1 | auto:C1 | Un 5 en cada asignatura (Termo, CM, Física III, FOE, Mates III) |
+| Asignaturas del 1er cuatri aprobadas | 1 | 0 | 0 | 6 | Las 6 (incluido Italiano) con nota ≥ 5 en el acta |
+| Asignaturas del 2º cuatri aprobadas | 1 | 0 | 0 | 6 | Elasticidad, Fluidos, Métodos mat., Circuitos, Máquinas, Calor ≥ 5 |
 
 Si → entonces:
-- Si una práctica tiene entrega esta semana → es la ⭐ del día anterior a la entrega.
+- Si tengo parcial, control o práctica evaluable esta semana → es la ⭐ del día anterior.
+- Si saco menos del mínimo en un parcial → la ⭐ de esa semana es preparar la recuperación.
 - Si es Navidad o Fallas → modo mínimo: 1 hora de estudio al día y nada más.
 
 ## M2 · Gimnasio y perder 15 kg · peso 2 · 2026-09-01 → 2027-06-30
