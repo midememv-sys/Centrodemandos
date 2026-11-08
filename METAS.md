@@ -20,10 +20,10 @@ Si → entonces:
 | Submeta | Peso | Inicio | Actual | Objetivo | Hecho cuando |
 |---|---|---|---|---|---|
 | Peso corporal (kg) | 3 | 113 | 107 | 98 | Báscula ≤ 98 kg |
-| Semanas con ≥ 3 sesiones de gym | 1 | 0 | ? | 30 | 30 semanas cumplidas |
+| Semanas con ≥ 5 sesiones (fútbol + gym) | 1 | 0 | 5 | 30 | 30 semanas con fútbol (mar, jue, partido) + ≥ 2 de gym |
 
 Si → entonces:
-- Si no he ido al gym en 3 días → mañana voy aunque sean 20 minutos.
+- Si llevo 2 días de la semana sin gym y es jueves → voy viernes y sábado.
 - Si es Navidad o Fallas → mínimo 2 sesiones por semana.
 
 ## M3 · Ahorrar 1.000 € · peso 1 · 2026-09-01 → 2027-06-30

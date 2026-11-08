@@ -2,12 +2,12 @@
 
 _Generado por scripts/progreso.py — no editar a mano._
 
-**Global:** ▓▓░░░░░░░░ hecho 21 %
+**Global:** ▓▓░░░░░░░░ hecho 19 %
 
 | Meta | Progreso | Esperado hoy | Ritmo | Días restantes |
 |---|---|---|---|---|
 | M1 Aprobar todo | ▓▓░░░░░░░░ hecho 16 % | 21 % | 🟡 | 249 |
-| M2 Gimnasio y perder 15 kg | ▓▓▓▓░░░░░░ hecho 40 % | 23 % | 🟢 | 234 |
+| M2 Gimnasio y perder 15 kg | ▓▓▓░░░░░░░ hecho 34 % | 23 % | 🟢 | 234 |
 | M3 Ahorrar 1.000 € | ░░░░░░░░░░ hecho 0 % | 23 % | 🔴 | 234 |
 
 ## M1 · Aprobar todo
@@ -17,7 +17,7 @@ _Generado por scripts/progreso.py — no editar a mano._
 
 ## M2 · Gimnasio y perder 15 kg
 - Peso corporal (kg): ▓▓▓▓░░░░░░ hecho 40 % (ahora 107 · meta 98)
-- Semanas con ≥ 3 sesiones de gym: ? (falta dato)
+- Semanas con ≥ 5 sesiones (fútbol + gym): ▓▓░░░░░░░░ hecho 17 % (ahora 5 · meta 30)
 
 ## M3 · Ahorrar 1.000 €
 - Ahorrado (€): ░░░░░░░░░░ hecho 0 % (ahora 0 · meta 1000)
@@ -31,6 +31,3 @@ _Generado por scripts/progreso.py — no editar a mano._
 | Fundamentos de organización de empresas (C1) | 0.00 / 10 | 0 % | — | 5.0 de media |  |
 | Matemáticas III (C1) | 0.65 / 10 | 10 % | 6.5 | 4.8 de media |  |
 | Italiano (C1) | — | — | — | — | falta la guía |
-
-## Datos que faltan
-- M2 · Semanas con ≥ 3 sesiones de gym
