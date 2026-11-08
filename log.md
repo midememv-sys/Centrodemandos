@@ -17,3 +17,4 @@
 2026-11-08 23:36 · claude · seguimiento-ecc: relacion_con_claude rellenada
 2026-11-08 23:41 · claude · /cierre hecho
 2026-11-08 23:49 · claude · AGENTS: agenda/citas las lleva Jenda (no crear eventos); basto-evento-2026-11-28: +2 submetas (reunión Jordan y Nando, publi con Sobremesa); ESTADO regenerado
+2026-11-08 23:51 · claude · proyectos/idea-grok-bot.md creado (pausado, revisar 15/12); ESTADO regenerado

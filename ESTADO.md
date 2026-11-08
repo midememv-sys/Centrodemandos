@@ -49,6 +49,7 @@ _Generado por scripts/progreso.py — no editar a mano._
 |  | OP BUILDER - sistema gestor | Negocios IA | ▓▓▓▓▓░ faltan 20 % | 🟢 | chatgpt | Priorizar la ejecución comercial de los activos digitales ya seleccionados frente a la construcción de más infraestructura. |
 |  | Tienda de plantillas digitales | Negocios IA | ▓▓░░░░ hecho 38 % | 🟢 | chatgpt | Verificar y completar el XLSX del Christmas & Holiday Party Planner, incluidas fórmulas, protección y ficha comercial. |
 |  | AGENTE 001 - Context Bridge | Herramientas propias | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Ejecutar una transferencia completa de BASTO y comparar la recuperación de contexto en ambas plataformas. |
+|  | Idea · Grok Bot (aparcada) | Herramientas propias | ░░░░░░ hecho 0 % | ⏸ | ? | Revisar a mediados de diciembre si hay algo que Claude y ChatGPT no cubran; si lo hay, probarlo 1 mes con un caso concreto. |
 |  | Indiana - Sales OS | Indiana | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Verificar el acceso a los datos comerciales de Fourvenues antes de desarrollar la siguiente versión. |
 |  | AGENTE 003 - Business Hunter | Negocios IA | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Revisar la validación pendiente de Justifica Falla antes de autorizar su construcción. |
 |  | AGENTE 004 - Automation Hunter | Negocios IA | ▓▓▓▓▓░ faltan 21 % | ⏸ | chatgpt | Validar Sprint UPV en iPad y decidir si continuar con las siguientes automatizaciones. |
@@ -56,4 +57,4 @@ _Generado por scripts/progreso.py — no editar a mano._
 |  | AGENTE 006 - YouTube Clipper | Negocios IA | ▓▓▓░░░ faltan 43 % | ⏸ | chatgpt | Desbloquear una fuente con permisos suficientes antes de retomar las pruebas sobre directos reales. |
 |  | Video Venture - tutoriales originales | Negocios IA | ▓▓▓░░░ hecho 45 % | ⏸ | chatgpt | Mantener el NO-GO público hasta resolver las limitaciones de producción detectadas en M015. |
 
-_13 activos · 7 pausados · 3 en foco (máx. 3)_
+_13 activos · 8 pausados · 3 en foco (máx. 3)_
