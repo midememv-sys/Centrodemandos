@@ -16,7 +16,7 @@ Bruno Miranda. Estudiante de 2º de GITI (UPV, Valencia). Trabaja jueves y viern
 | `ESTADO.md` | Panel con los %. Lo genera `scripts/progreso.py`. | Solo el script. No editar a mano |
 | `diario/AAAA-MM-DD.md` | Un archivo por día (plantilla en `diario/_plantilla.md`) | `/hoy` lo crea, `/cierre` lo completa |
 | `log.md` | Registro. Solo se añaden líneas al final. | Todos los agentes |
-| `proyectos/` | Un archivo por proyecto (fase 2) | — |
+| `proyectos/` | Una ficha por proyecto (Claude o ChatGPT); el script calcula su %. | Agente, con `/estado` |
 
 ## Al empezar cualquier sesión, lee en este orden
 1. `AGENTS.md`
@@ -40,6 +40,7 @@ Bruno Miranda. Estudiante de 2º de GITI (UPV, Valencia). Trabaja jueves y viern
 ## Comandos
 - `/hoy`: plan del día (skill `hoy`).
 - `/cierre`: cierre del día (skill `cierre`).
+- `/estado`: actualiza un proyecto con un bloque pegado (skill `estado`).
 - "actualiza X a N": cambia el valor `Actual` en `METAS.md`, ejecuta el script y apúntalo en `log.md`.
 
 ## Coordinación entre agentes

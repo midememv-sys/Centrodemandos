@@ -13,6 +13,8 @@ RAIZ = Path(__file__).resolve().parent.parent
 METAS = RAIZ / "METAS.md"
 ESTADO = RAIZ / "ESTADO.md"
 ASIG = RAIZ / "ASIGNATURAS.md"
+PROY = RAIZ / "proyectos"
+HECHO = {"sí": 1.0, "si": 1.0, "hecho": 1.0, "parcial": 0.5, "no": 0.0}
 CAB_ASIG = re.compile(r"^##\s*(.+?)\s*·\s*(C\d)\b")
 
 CABECERA = re.compile(
@@ -69,6 +71,59 @@ def leer_asignaturas():
         a["bajo_min"] = [x["acto"] for x in hechos if x["min"] is not None and x["nota"] < x["min"]]
         a["sin_datos"] = not a["actos"]
     return asigs
+
+
+def leer_proyectos(hoy):
+    if not PROY.exists():
+        return []
+    res = []
+    for f in sorted(PROY.glob("*.md")):
+        if f.name.startswith("_") or f.name.upper().startswith("LEEME"):
+            continue
+        txt = f.read_text(encoding="utf-8")
+        campos = dict(re.findall(r"^([a-z_]+):\s*(.*)$", txt, re.M))
+        titulo = re.search(r"^#\s*(.+)$", txt, re.M)
+        suma = pesos = 0.0
+        for linea in txt.splitlines():
+            if not linea.startswith("|"):
+                continue
+            c = [x.strip() for x in linea.strip().strip("|").split("|")]
+            if len(c) < 3 or c[0].lower() == "submeta" or set(c[0]) <= set("-: "):
+                continue
+            h = c[2].lower().rstrip("%").strip()
+            v = HECHO.get(h)
+            if v is None:
+                v = num(h) / 100 if num(h) is not None else None
+            if v is None:
+                continue
+            w = num(c[1]) or 1
+            suma += max(0.0, min(1.0, v)) * w
+            pesos += w
+        p = suma / pesos if pesos else None
+        estado = campos.get("estado", "activo").strip().lower()
+        fl = campos.get("fecha_limite", "?").strip()
+        dias = None
+        try:
+            dias = (date.fromisoformat(fl) - hoy).days
+        except ValueError:
+            pass
+        if estado != "activo":
+            sem = "⏸"
+        elif p is None:
+            sem = "⚪"
+        elif dias is not None and dias <= 7 and p < 0.8:
+            sem = "🔴"
+        elif dias is not None and dias <= 30 and p < 0.5:
+            sem = "🟡"
+        else:
+            sem = "🟢"
+        res.append({
+            "nombre": titulo.group(1).strip() if titulo else f.stem, "area": campos.get("area", "Otros").strip(),
+            "estado": estado, "foco": campos.get("foco", "no").strip().lower() in ("sí", "si", "yes"),
+            "donde": campos.get("donde", "?").strip(), "p": p, "sem": sem, "dias": dias,
+            "proximo": campos.get("proximo_paso", "?").strip(),
+        })
+    return res
 
 
 def resolver_auto(valor, asigs, es_objetivo):
@@ -178,6 +233,17 @@ def main():
             aviso = ("⚠ por debajo del mínimo: " + ", ".join(a["bajo_min"])) if a["bajo_min"] else ""
             out.append(f"| {a['nombre']} ({a['cuatri']}) | {a['puntos']:.2f} / 10 | {a['evaluado']:g} % | {media} | {nec} | {aviso} |")
         out.append("")
+    proys = leer_proyectos(hoy)
+    if proys:
+        orden = lambda x: (not x["foco"], x["estado"] != "activo", x["area"], x["nombre"])
+        out += ["## Proyectos", "| | Proyecto | Área | Progreso | Ritmo | Dónde | Próximo paso |", "|---|---|---|---|---|---|---|"]
+        for x in sorted(proys, key=orden):
+            prog = f"{barra(x['p'], 6)} {etiqueta(x['p'])}" if x["p"] is not None else "sin datos"
+            plazo = f" · {x['dias']} d" if x["dias"] is not None and x["estado"] == "activo" else ""
+            out.append(f"| {'⭐' if x['foco'] else ''} | {x['nombre']} | {x['area']} | {prog} | {x['sem']}{plazo} | {x['donde']} | {x['proximo']} |")
+        activos = sum(1 for x in proys if x["estado"] == "activo")
+        focos = sum(1 for x in proys if x["foco"])
+        out += ["", f"_{activos} activos · {len(proys) - activos} pausados · {focos} en foco (máx. 3)_", ""]
     pendientes = [f"{m['id']} · {n}" for m in metas for n in m["faltan"]]
     if pendientes:
         out += ["## Datos que faltan", *[f"- {p}" for p in pendientes], ""]

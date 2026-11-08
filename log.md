@@ -10,3 +10,4 @@
 2026-11-08 02:48 · claude · ASIGNATURAS.md: notas reales del 1er cuatri; ESTADO regenerado
 2026-11-08 02:50 · claude · METAS M2: submeta → Semanas con ≥ 5 sesiones (fútbol + gym), actual 5, objetivo 30; regla gym → jueves con 2 días sin gym → viernes y sábado; ESTADO regenerado
 2026-11-08 02:52 · claude · diario 2026-11-08: tarea 3 (asignaturas en METAS/ASIGNATURAS) marcada como hecha; ⭐ y gym siguen abiertas
+2026-11-08 17:49 · claude · Fase 2: proyectos/ (16 fichas + plantilla + LEEME), scripts/progreso.py con % de proyectos, skill /estado (.claude y .agents), AGENTS.md actualizado; ESTADO regenerado
