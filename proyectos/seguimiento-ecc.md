@@ -9,7 +9,7 @@ fecha_limite: ?
 que_es: Seguimiento automatizado de ECC a partir de Excel. Los datos son privados y viven solo en el Proyecto "SEGUIMIENTO ECC" de Claude, nunca en este repo.
 meta_final: Subir el Excel actualizado y obtener solo el seguimiento, los gráficos y las alertas.
 proximo_paso: Crear el Proyecto en Claude y analizar el primer Excel.
-relacion_con_claude: ?
+relacion_con_claude: se trabaja en el Proyecto SEGUIMIENTO ECC de Claude.
 
 | Submeta | Peso | Hecho |
 |---|---|---|
