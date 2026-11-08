@@ -15,3 +15,4 @@
 2026-11-08 18:15 · claude · proyectos/_plantilla.md: áreas BASTO | Indiana | Trabajo (Transvia) | Negocios IA | Herramientas propias | Personal | Seguimientos
 2026-11-08 18:27 · claude · proyectos/seguimiento-ecc.md creado (sin datos del Excel); candado ECC en AGENTS.md; ESTADO regenerado
 2026-11-08 23:36 · claude · seguimiento-ecc: relacion_con_claude rellenada
+2026-11-08 23:41 · claude · /cierre hecho
