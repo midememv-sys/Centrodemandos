@@ -8,27 +8,28 @@ Formato de cabecera: `## Nombre · C1|C2 · código`. No cambies las columnas.
 Regla: CF = 0,4·PE1 + 0,4·PE2 + 0,2·PR. Mínimo 4 en cada parcial; si no llegas, la nota máxima es un 4. Las prácticas no tienen mínimo, pero faltar a una cuenta como un 0.
 | Acto | Peso % | Mín | Nota | Fecha |
 |---|---|---|---|---|
-| Parcial 1 (PE1) | 40 | 4 |  |  |
+| Parcial 1 (PE1) | 40 | 4 | 8.08 | 1P: P1 9,00 · P2 9,50 · P3 5,75 |
 | Parcial 2 (PE2) | 40 | 4 |  |  |
-| Práctica 1 (test + informe) | 6.67 |  |  |  |
+| Práctica 1 (test + informe) | 6.67 |  | 8.80 | 21/09 |
 | Práctica 2 (test + informe) | 6.67 |  |  |  |
 | Práctica 3 (test + informe) | 6.66 |  |  |  |
 
 ## Ciencia de materiales · C1 · 11411
-Regla: sin mínimos; con un 5 de media apruebas. Puedes recuperar cada parcial entero (test y problemas). Solo se puede faltar a 1 de las 9 prácticas.
+Regla: sin mínimos; con un 5 de media apruebas. Puedes recuperar cada parcial entero (test y problemas). Solo se puede faltar a 1 de las 9 prácticas. Laboratorio: la intranet muestra PL1-PL4, así que el 10 % de laboratorio se reparte entre esos 4 (pendiente de confirmar).
 | Acto | Peso % | Mín | Nota | Fecha |
 |---|---|---|---|---|
-| Pregunta del minuto PM1 | 5 |  |  |  |
-| Pregunta del minuto PM2 | 5 |  |  |  |
+| Pregunta del minuto PM1 | 5 |  | 4.25 |  |
+| Pregunta del minuto PM2 | 5 |  | 7.15 |  |
 | Test parcial 1 (T1P) | 15 |  |  |  |
 | Problemas parcial 1 (P1P) | 20 |  |  |  |
-| Pregunta lab PL1 | 2.5 |  |  |  |
 | Pregunta del minuto PM3 | 5 |  |  |  |
 | Pregunta del minuto PM4 | 5 |  |  |  |
 | Test parcial 2 (T2P) | 15 |  |  |  |
 | Problemas parcial 2 (P2P) | 20 |  |  |  |
-| Pregunta lab PL2 | 2.5 |  |  |  |
-| Memoria de prácticas | 5 |  |  |  |
+| Lab PL1 | 2.5 |  | 10.00 |  |
+| Lab PL2 | 2.5 |  | 8.50 |  |
+| Lab PL3 | 2.5 |  | 7.80 |  |
+| Lab PL4 | 2.5 |  | 6.80 |  |
 
 ## Física III · C1 · 11436
 Regla: nota = 0,8·media de parciales + 0,2·laboratorio. Cada parcial es 35 % teoría + 65 % problemas, y necesitas un mínimo de 3,5 en cada parcial; si no llegas, la nota máxima es un 3,5. El laboratorio es obligatorio y no se recupera.
@@ -38,8 +39,8 @@ Regla: nota = 0,8·media de parciales + 0,2·laboratorio. Cada parcial es 35 % t
 | Parcial 1 · problemas | 26 |  |  |  |
 | Parcial 2 · teoría | 14 |  |  |  |
 | Parcial 2 · problemas | 26 |  |  |  |
-| Lab sesión 1 | 4 |  |  |  |
-| Lab sesión 2 | 4 |  |  |  |
+| Lab sesión 1 | 4 |  | 9.00 |  |
+| Lab sesión 2 | 4 |  | 8.50 |  |
 | Lab sesión 3 | 4 |  |  |  |
 | Lab sesión 4 | 4 |  |  |  |
 | Lab sesión 5 | 4 |  |  |  |
@@ -59,7 +60,7 @@ Regla: nota = 0,3·EX1 + 0,4·EX2 + 0,2·PL + 0,1·OB. Mínimo 4 en cada examen;
 Regla: cada parcial cuenta 80 % examen + 20 % control. Mínimo 3,5 en cada parcial; si no llegas, la nota máxima es un 3,5. Los controles no se recuperan.
 | Acto | Peso % | Mín | Nota | Fecha |
 |---|---|---|---|---|
-| Control 1 (semana 6) | 10 |  |  |  |
+| Control 1 (semana 6) | 10 |  | 6.45 |  |
 | Parcial 1 | 40 | 3.5 |  |  |
 | Control 2 (semana 12) | 10 |  |  |  |
 | Parcial 2 | 40 | 3.5 |  |  |
