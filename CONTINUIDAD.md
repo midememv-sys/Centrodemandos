@@ -1,41 +1,58 @@
 # Centro de mandos · continuidad común
 
-Actualizado: **17/11/2026**. Entrada única para Codex, Claude y el chat gestor. Actualizar este archivo en su sitio; el histórico queda en Git, no en nuevas memorias, carpetas o adjuntos para que Bruno los transfiera.
+Actualizado: **17/11/2026**. Entrada única para Codex, Claude y el chat gestor. Actualizar en su sitio; histórico en Git, sin nuevos handoffs, memorias por versión o adjuntos que Bruno tenga que transferir.
 
-## Estado y acceso reales
+## Objetivo permanente
 
-- Repositorio compartido: **midememv-sys/Centrodemandos**, rama **main**. Este Markdown sí está disponible en GitHub.
-- Última aplicación: **visual7**, conservada en `/workspace/Centrodemandos-visual7`. Copia ordenada y comprobada en `/workspace/centro-github-preparado/web`.
-- El código web y los medios **todavía no están publicados en una rama remota**. `desarrollo/centro-web` es la rama prevista, no una fuente que otro chat pueda afirmar haber leído.
-- Preparación: app visual7 idéntica por hash; instalación con lockfile, 28 pruebas TypeScript, 4 Python y build correctos. Sin nueva ejecución de navegador por ordenar documentación. La entrega visual7 precedente verificó 43 casos de navegador selectivos y 2 PWA; no llamarlo suite completa ni sumar repeticiones.
-- Funciona el prototipo local: proyectos/submetas, medición, entregables/revisiones, importación reconciliada y atómica, historial, conflictos, borradores, deshacer, backup/restauración y exploración espacial con foco/retorno por identidad. No hay backend, sincronización, Hermes o runner.
+Coordinar **todos** los proyectos desde una cartera global: estado, progreso medido, información pendiente, bloqueo, siguiente acción, responsable, fecha y entregables. Tres prioridades complementan la cartera completa. Jenda conserva agenda/horarios. Máxima calidad espacial y de movimiento es el objetivo; no está acreditada frente a la referencia ausente ni en iPad físico.
 
-GitHub comparte código/documentos autorizados, **no conversaciones ni el IndexedDB de los dispositivos**. Jenda conserva agenda/horarios. Las notas operativas heredadas de raíz no se han actualizado ni se confirma su frescura al reorganizar. Parcial sigue desconocido; cobertura incompleta no da un porcentaje exacto. No publicar datos personales nuevos, credenciales o información ECC: el repositorio es público.
+## Fuente activa y commits
 
-## Próximo paso
+- GitHub compartido: **midememv-sys/Centrodemandos · main**. Al empezar se verificó `8e99c2616b80c0a64023411ceaa2a0a3644f7da2`; este incremento actualiza únicamente Markdown de continuidad, incidencias e instrucciones comunes. Confirmar siempre el head de main y el commit del archivo al leerlo.
+- Aplicación activa **local**: `/workspace/centro-github-preparado/web`. Git local en su padre, rama `desarrollo/centro-web-local`. Código de app en **`9b8b9f0c9493f7781ae9730d4598e01abe79f732`**, sobre `561407b` (escena) y `8386748` (integridad). Commit inicial recuperable `195825b`; carpetas visual5/6/7 y trabajo previo conservados.
+- **El código y los medios NO están publicados en GitHub.** `desarrollo/centro-web` remota no existe. Otro chat no puede afirmar que ha leído web/ desde main. La autorización de publicación sigue pendiente; no reintentar la subida rechazada ni reutilizar blobs huérfanos. No se ha desplegado ni abierto un túnel.
+- Registro técnico único: **[FALLOS.md](FALLOS.md)**. A1/A2/A3 y S1/S2/S3 validados en el alcance indicado. V1, V2 y R1 abiertos: dispositivo físico, rendimiento/calidad objetivo y referencia ausente. Ningún P1 de integridad conocido queda abierto en esta revisión.
 
-1. **Destacada:** obtener autorización expresa para publicar la app y evidencia mínima sintética: código visual7, un vídeo de 56s y dos capturas, unos 3MB en total, en `desarrollo/centro-web`. La revisión automática rechazó una captura pública porque interpretó el permiso actual como documentación de continuidad. No volver a intentar esos medios sin autorización. Tras publicar, sustituir aquí las ubicaciones locales por rama, commit y enlaces reales verificados.
-2. Recibir las imágenes de Jenda/Apple y **ScreenRecording_11-11-2026 07-50-13_1.mp4**. Siguen ausentes; el vídeo de nuestra app no es el vídeo de inspiración. Dirección visual sin contraste cerrado.
-3. Validar Safari/iPad físico y corregir hallazgos reproducibles. Emulación y RAF headless no prueban 60/120fps físicos.
+GitHub comparte documentación autorizada, no conversaciones ni IndexedDB. La fuente operativa del prototipo es local al navegador/origen, sin sincronización. Markdown personal y ESTADO.md no se modificaron ni se reafirmó su frescura. Demo/evidencia exclusivamente sintéticas; repositorio público, sin nuevos datos personales, secretos o información ECC.
 
-Responsable: Codex cierra la organización documental; no hay tarea de escritura concurrente asignada. Antes de editar, acordar un único responsable y alcance. Otros agentes revisan o usan ramas/checkouts separados.
+## Qué funciona y qué cambió
+
+Se reprodujeron los tres fallos sobre visual7; no se localizó visual7-corregido. IDs externos escapados en HTML conservando identidad no UUID; commit/Markdown bloquean cambios de unidad con observaciones; backups antiguos conservan unidad original y la última incompatible queda no calculable, sin precarga ni comparación falsa. Cachés/inspector/3D usan identidad proyecto/submeta.
+
+Primera escena **Three.js real**, diferida y única para el proyecto seleccionado: base y objetos paramétricos por categoría, materiales/reflejo local/sombras, piezas de submetas reales, selección, reunión/despliegue reversible y medición convencional. Guardar/deshacer actualiza representación; cerrar libera recursos y recupera foco/contexto. DOM equivalente y alternativa sin WebGL; reduced motion y render bajo demanda. Etiquetas móviles en rejilla frontal para evitar solapamientos.
+
+Cartera completa de 24 proyectos/títulos largos, edición, medición directa, resultado/trabajo/evidencia separados, historial, importación reconciliada atómica e idempotente, backup/restauración, conflictos y borradores preservados. Sin backend, Hermes, runner, agenda nueva, servicios de pago ni IA para consultar/editar/calcular. Conversión explícita de unidades pendiente; no improvisarla.
+
+## Verificación ejecutada ahora
+
+- **35 TypeScript y 4 Python**, aprobadas.
+- **96 E2E funcionales** (48 Chromium, 48 WebKit), excluyendo vídeo. Tras ajustes de selección >6/objetivo desconocido, **18 afectadas repetidas**; tras CSS móvil, **4 afectadas repetidas**, todas aprobadas. El estado final tiene regresiones selectivas posteriores; no se declara otra ejecución completa de 96 ni se suman repeticiones.
+- **2 PWA Chromium** sobre build final, aprobadas: precarga/primera exploración offline, edición y recarga. WebKit 27.2 también mostró escena WebGL; no es Safari/iPad físico.
+- Build y reconstrucción limpia con lockfile (`npm ci`): **16 archivos de salida idénticos SHA-256**. Advertencia de tamaño del chunk 3D: ≈534 kB minificado / ≈142 kB gzip diferidos.
+- Vídeo sintético nuevo **57s, velocidad normal**, una prueba de grabación aprobada. Capturas antes/después con mismos proyectos y viewport, vertical, oscuro/reduced y cartera 24. Todo preparado localmente bajo `web/docs/revision/`, con nombres fijos; no adjuntado para traslado ni publicado.
+- Medición en VM Linux AMD EPYC, Chromium 159/ANGLE SwiftShader: RAF p95 ≈300 ms, máximo ≈917 ms en el recorrido, con arranque/compilación; renders estables en reposo 5/5. **No acredita fluidez ni 60/120 fps en iPad**. No se reintrodujo blur completo. Detalle, método y límites en la verificación local y V2.
+
+Evidencia heredada de visual7/copia externa no se presenta como nueva. Fuentes locales vigentes: web/README.md, BRIEF.md, DESIGN.md, DECISIONES.md, docs/VERIFICACION.md. Registro técnico compartido aquí enlazado; no crear otro.
+
+## Abrir, recuperar y siguiente paso
+
+Desde la fuente local: `npm ci`, `npm run dev -- --host 127.0.0.1 --port 5177`; build con `npm run build`. Sin secretos ni variables obligatorias. Localhost pertenece al servidor, **no es un enlace accesible desde el iPad**. El entorno solo anuncia SSH y no ofrece URL HTTP de vista previa.
+
+Ajustes → exportar backup JSON antes de actualizar. Restaurar en origen vacío compatible, verificar observaciones/unidades/historial. Rollback del código en checkout separado, conservando el origen y el backup; no hacer reset sobre trabajo posterior ni borrar IndexedDB. `8386748` conserva los arreglos de integridad sin 3D; visual7 original también se conserva, pero contiene los fallos corregidos.
+
+**Siguiente paso:** perfilar y ajustar esta misma escena en Safari/iPad físico con el recorrido representativo, y contrastarla con el archivo original accesible en los materiales autorizados. Falta exactamente **ScreenRecording_11-17-2026 09-20-53_1.mp4** (≈8,47s), además de imágenes originales Jenda/Apple; no se ha visto. Se usó la descripción del gestor (mecanismos/reloj, capas, reflejos y perspectiva), sin afirmar tiempo real. No confundirlo con el vídeo del 11/11 ni con nuestro recorrido. No pedir a Bruno otro traslado manual.
 
 ## Protocolo común
 
-- Abrir este archivo desde GitHub en cada sesión y comprobar su commit. No usar una copia de Conocimiento o memoria del chat como estado actual.
-- Leer solo archivos pertinentes. No cargar log completo, diarios, notas personales o conversaciones para desarrollar frontend.
-- El gestor lee, decide y redacta encargos. Si su conexión no permite escribir, no afirmar una actualización. Codex/Claude Code materializan cambios autorizados; Claude no es requisito ni se compra cuota automáticamente.
-- Cerrar cada incremento actualizando AQUÍ commit, pruebas ejecutadas realmente, bloqueos y siguiente paso. Sustituir el estado anterior; no crear HANDOFF/versiones duplicados de la misma memoria.
-- En la fuente activa conservar solo producto, diseño, decisiones y verificación vigentes. Evidencia con rutas fijas: un vídeo y pocas capturas; histórico en commits. No versionar ZIP, dist, node_modules, cachés o grabaciones descartadas. Conservar trazas mientras un fallo siga abierto y retirar después solo generados propios; no borrar trabajo ajeno ni datos operativos.
-- Si falta acceso, declarar archivo/permiso ausente. No inventar sincronización ni pedir que Bruno vuelva a transportar archivos entre chats. No habilitar despliegues, automatizaciones de pago o servicios nuevos con esta organización.
+- Leer esta nota desde main y confirmar commit en cada sesión. Memoria del chat/Conocimiento no sustituye el estado actual. Si no hay acceso a la fuente local, declararlo; el código no está publicado aún.
+- Un responsable de escritura por tarea. Codex implementa; Claude opcional. Paralelo solo con ramas/checkouts separados y revisión acotada. No cargar diarios, log completo o documentos personales para frontend.
+- Leer FALLOS antes de ampliar efectos. Reproducir/corregir/validar integridad primero. Valores externos: escape contextual o DOM/dataset; CSS.escape solo selectores. Unidades observadas no reinterpretadas. Cachés de submeta por proyecto/submeta.
+- No inventar progreso, cobertura, resultados, conexiones, pruebas o independencia de revisión. Parcial desconocido; estimación heredada separada. Animación nunca anuncia guardado antes del commit.
+- Actualizar archivos vigentes, evidencia mínima en rutas fijas e histórico en Git. No nuevos handoffs/memorias, ZIP, dist, node_modules, secretos o capturas descartadas. Retirar solo generados propios; conservar trabajo ajeno y datos operativos.
+- Código/medios, despliegues y gasto requieren la autorización que corresponda. La centralización Markdown no autoriza su publicación.
 
-## Conectar al chat gestor
+## Acceso del chat gestor
 
-1. ChatGPT → Ajustes → Apps/Plugins → GitHub → conectar o gestionar la cuenta.
-2. En GitHub, permitir **midememv-sys/Centrodemandos** entre los repositorios autorizados.
-3. En el chat gestor, seleccionar GitHub cuando esté disponible y pedir que lea este archivo. Disponibilidad según cuenta, plan y superficie.
-4. Si es un GPT personalizado, habilitar Apps en sus capacidades cuando se ofrezca. Si no, usar un chat normal compatible. Conocimiento subido es una copia estática, no acceso vivo. No pegar tokens en el chat ni cambiar visibilidad.
+ChatGPT → Ajustes → Apps/Plugins → GitHub → conectar y autorizar midememv-sys/Centrodemandos. Seleccionar GitHub en el chat cuando esté disponible. En GPT personalizado, habilitar Apps si su configuración lo ofrece; en otro caso usar un chat normal compatible. Conocimiento subido es estático; no transfiere conversaciones, memoria, cuota o acceso al código no publicado. No pegar tokens ni cambiar visibilidad.
 
 Fuentes: [GitHub en ChatGPT](https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt-deep-resear), [capacidades de GPTs](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts).
-
-Mensaje inicial: «Lee CONTINUIDAD.md desde main en midememv-sys/Centrodemandos. Confirma commit, estado real y siguiente paso. Si no puedes acceder, dilo. No reinicies el producto ni trates documentos antiguos como vigentes».
