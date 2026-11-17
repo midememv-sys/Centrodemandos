@@ -1,1 +1,2 @@
+@CONTINUIDAD.md
 @AGENTS.md

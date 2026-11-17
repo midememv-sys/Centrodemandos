@@ -1,3 +1,13 @@
+# Coordinación vigente · 17/11/2026
+
+Lee primero [CONTINUIDAD.md](CONTINUIDAD.md) desde main: es la única nota de desarrollo vigente y distingue lo compartido en GitHub de lo preparado localmente. Sustituir su estado al actualizar; histórico en Git, sin nuevas memorias duplicadas ni adjuntos que Bruno deba transferir.
+
+Una tarea tiene un responsable. Claude y Codex usan ramas/checkouts separados o revisión delimitada, no escritura simultánea en el mismo checkout. Para frontend no cargar diario/log completo o notas personales innecesarias. No actualizar valores ni fechas operativos al reorganizar documentos.
+
+Las reglas validadas del prototipo (parcial desconocido, rango/cobertura, sin global ni ritmo sin plan) prevalecen sobre descripciones antiguas. La guía/script/estado Markdown heredados no quedan revalidados por este cambio. La publicación de código/medios adicionales está pendiente según CONTINUIDAD. Esta organización no autoriza despliegues, comunicaciones, gastos ni publicación de datos privados.
+
+---
+
 # Centro de mandos de Bruno — reglas comunes (Claude Code, Codex, ChatGPT)
 
 ## Quién
