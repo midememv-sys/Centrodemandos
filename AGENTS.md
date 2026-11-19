@@ -1,4 +1,4 @@
-# Coordinación vigente · 17/11/2026
+# Coordinación vigente · 19/11/2026
 
 Lee primero [CONTINUIDAD.md](CONTINUIDAD.md) desde main: es la única nota de desarrollo vigente y distingue lo compartido en GitHub de lo preparado localmente. Sustituir su estado al actualizar; histórico en Git, sin nuevas memorias duplicadas ni adjuntos que Bruno deba transferir.
 
@@ -8,6 +8,11 @@ Las reglas validadas del prototipo (parcial desconocido, rango/cobertura, sin gl
 
 
 ## Prevención técnica vigente
+
+- Excepciones es una vista derivada del mismo estado, con cartera completa a un toque. Fechas sin hora: días de calendario de Madrid, no horas transcurridas; no inferir vencimientos ausentes ni crear agenda.
+- Si una entidad aparece en varios grupos, capturar origen por ID y contexto de grupo. Al desaparecer una excepción, enfocar un destino visible válido. No enfocar la primera coincidencia de otro grupo.
+- No colocar controles en contenedores que se ocultan como metadatos. Conservar densidad y objetivos táctiles al añadir navegación; comprobar ambas orientaciones y ≥2 filas de cartera de referencia en horizontal.
+- La disponibilidad/foco de controles debe seguir el estado de forma inmediata; no esperar al frame de una animación para volverlos accionables.
 
 - Leer [FALLOS.md](FALLOS.md), registro técnico único. No añadir efectos mientras haya P1 de integridad abiertos. Distinguir defecto, mejora y verificación pendiente; cada corrección lleva reproducción/regresión y estado respaldado por ejecución.
 - HTML de valores externos: escape en texto/atributos o propiedades DOM/dataset; CSS.escape solo para selectores. No suponer UUID ni usar IDs como marcado.

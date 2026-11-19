@@ -1,6 +1,6 @@
 # Registro técnico único
 
-Actualizado 17/11/2026. Estados: abierto → corregido en código → validado. Validación de navegador significa Linux emulado, nunca iPad físico. Histórico en Git; actualizar estas entradas, no duplicarlas por versión.
+Actualizado 19/11/2026. Estados: abierto → corregido en código → validado. Validación de navegador significa Linux emulado, nunca iPad físico. Histórico en Git; actualizar estas entradas, no duplicarlas por versión.
 
 ## A1 · P1 · IDs externos en HTML · validado
 
@@ -23,9 +23,11 @@ Actualizado 17/11/2026. Estados: abierto → corregido en código → validado. 
 - Regresión: web/tests/e2e/integrity.spec.ts A3: aislamiento; guardar y deshacer dentro del proyecto conserva cambios legítimos.
 - Evidencia nueva: Chromium y WebKit aprobados. Límite: sin Safari físico; cierre funcional satisfecho.
 
-## V1 · Verificación pendiente · abierto
+## V1 · Safari/iPad físico · abierto (pendiente de acceso)
 
-Safari/iPad físico, teclado virtual y trackpad reales, VoiceOver y rendimiento del dispositivo. No son defectos reproducidos. Cerrar con dispositivo/navegador/procedimiento y evidencia; RAF headless no acredita fps físicos.
+- Comprobación de acceso: 19/11/2026. Solo entorno Linux y navegadores headless; no hay iPad físico/Safari conectado ni portal HTTP del entorno. **La prueba física solicitada no se ejecutó**.
+- Recorrido que falta: con 24 proyectos sintéticos, abrir desde Excepciones → seleccionar submeta → medir 84→100 de 200 → confirmar 50 %/faltan 100 → deshacer a 42 %/faltan 116 → cerrar al mismo control/grupo. Probar toque/trackpad reales, precisión, fluidez, teclado virtual, orientación y foco.
+- Cierre: registrar modelo de iPad, iPadOS/Safari, fecha, viewport, resultado del recorrido y perfil del dispositivo; corregir hallazgos antes de efectos nuevos. Chromium/WebKit y toque emulados no cierran V1. Las comprobaciones anteriores de emulación conservan su alcance.
 
 ## R1 · Referencia ausente · abierto
 
@@ -48,7 +50,7 @@ No se localiza `ScreenRecording_11-17-2026 09-20-53_1.mp4` (≈8,47s) ni imágen
 
 ## V2 · Rendimiento y calidad objetivo · abierto (verificación/mejora)
 
-- Evidencia nueva: cinco ciclos en Chromium 159 headless, Linux AMD EPYC, ANGLE/SwiftShader; RAF p95 ≈300 ms y máximo ≈917 ms durante apertura/selección/cierre, incluyendo compilación. El contador de renders queda estable en reposo en 5/5 ciclos. No son fps presentados ni medición del iPad.
+- Evidencia histórica del 17/11/2026: cinco ciclos en Chromium 159 headless, Linux AMD EPYC, ANGLE/SwiftShader; RAF p95 ≈300 ms y máximo ≈917 ms durante apertura/selección/cierre, incluyendo compilación. El contador de renders queda estable en reposo en 5/5 ciclos. No son fps presentados ni medición del iPad.
 - Reproducción local: web/scripts/measure_spatial.mjs; detalle actual en web/docs/revision/rendimiento.json. El muestreo espera un frame de la nueva selección antes de declarar reposo, para no leer el indicador del frame previo.
 - Causa/alcance: renderizado software y arranque WebGL; no hay evidencia suficiente para atribuir esos costes al dispositivo objetivo. Ya se evita entorno de seis renders, se limita DPR y se libera escena; no se afirma resuelto el presupuesto de movimiento.
 - Criterio de cierre: perfil en Safari/iPad físico con el recorrido y mismos datos, revisar tiempos de respuesta/frames y adaptar calidad/presupuesto antes de afirmar fluidez o máxima calidad de referencia. No es un fallo P1 de integridad.
@@ -59,3 +61,24 @@ No se localiza `ScreenRecording_11-17-2026 09-20-53_1.mp4` (≈8,47s) ni imágen
 - Causa: proyección de etiquetas al plano 2D sin espacio suficiente en la segunda fila. Corrección: en móvil, rejilla DOM frontal y estable; las mallas continúan siendo 3D y los números vinculan cada pieza con su submeta.
 - Regresión: scene.spec.ts «transición reversible» comprueba los rectángulos de las tres etiquetas después de resize/teclado/reducir movimiento. Cuatro casos afectados repetidos, Chromium/WebKit, aprobados. Captura móvil renovada.
 - Cierre funcional satisfecho en emulación; Safari/iPad físico sigue en V1. No se alteró dominio/progreso.
+
+## E1 · P2 · Densidad al añadir Excepciones · validado
+
+- Regresión introducida durante este incremento: barra adicional sobre el resumen reducía a una las filas completas de cartera visibles en 1366×1024. Reproducción: cargar cartera sintética 24 y contar filas completas.
+- Causa: nuevo bloque vertical permanente antes de En foco. Corrección: acceso en encabezados existentes; barra de retorno solo dentro de Excepciones. Sin reducir letra ni controles de 44px.
+- Regresión: revision3.spec.ts «primera pantalla...» exige ≥2 filas completas en horizontal y siguiente acción/medición destacada en iPhone. Prueba falló antes; comprobación específica posterior aprobada en ambos motores. Regresión específica en ambos motores aprobada; vuelta a la cartera y vista de 24 proyectos aprobadas en las 24 afectadas finales.
+- Cierre funcional satisfecho en emulación con 24 proyectos/títulos largos. Límite físico V1.
+
+## E2 · P2 · Acceso oculto a 1024px · validado
+
+- Regresión introducida al mover el acceso: Excepciones quedaba invisible a 1024px, detectado en WebKit; la misma regla aplica a cualquier navegador estrecho.
+- Causa: contenedor span heredaba la regla que oculta texto secundario del encabezado. Corrección: contenedor propio de controles, sin depender de esa regla de metadatos.
+- Regresión: exceptions.spec.ts inicia la vista en ambos viewports/motores y comprueba retorno a 24 con búsqueda activa; primera ejecución estrecha falló, smoke posterior aprobado. Regresión específica en ambos motores aprobada; vuelta a la cartera y vista de 24 proyectos aprobadas en las 24 afectadas finales.
+- Cierre funcional satisfecho: acceso operable por teclado/toque emulado y visible en ambas orientaciones. V1 pendiente para dispositivo real.
+
+## S4 · P2 · Teclado durante despliegue rápido · validado
+
+- Reproducción observada 19/11: reunir/desplegar rápidamente, enfocar segunda etiqueta y Enter. Se mantenía la primera submeta porque la etiqueta todavía tenía visibility:hidden.
+- Causa: clase de disponibilidad de controles actualizada al dibujar un frame en lugar de al cambiar el estado. Disponibilidad DOM y frame podían discrepar. El indicador diagnóstico de animación también podía conservar el valor del frame anterior.
+- Corrección integrada: clase de visibilidad y estado diagnóstico de animación se actualizan sincrónicamente con la intención, reservando RAF para representación. Sin cambiar medidas, progreso ni añadir efectos.
+- Regresión: scene.spec.ts «mismo turno, sin esperar un frame» ejecuta despliegue/foco dentro de un único turno JS; falló antes de corregir. La batería selectiva de 60 también reprodujo el fallo en ambos motores (58 aprobadas, 2 fallidas). Cierre funcional satisfecho: 24 casos afectados finales aprobados en Chromium/WebKit, incluido el caso determinista. No se repitieron las 60 completas tras esta corrección. V1/V2 físicos siguen pendientes.
