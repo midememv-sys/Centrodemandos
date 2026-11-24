@@ -1,4 +1,4 @@
-# Coordinación vigente · 19/11/2026
+# Coordinación vigente · 24/11/2026
 
 Lee primero [CONTINUIDAD.md](CONTINUIDAD.md) desde main: es la única nota de desarrollo vigente y distingue lo compartido en GitHub de lo preparado localmente. Sustituir su estado al actualizar; histórico en Git, sin nuevas memorias duplicadas ni adjuntos que Bruno deba transferir.
 
@@ -8,6 +8,9 @@ Las reglas validadas del prototipo (parcial desconocido, rango/cobertura, sin gl
 
 
 ## Prevención técnica vigente
+
+- Vista privada de revisión autorizada: solo datos sintéticos, build compilado y base aislada. La privacidad corresponde al portal HTTP autenticado del entorno; un modo de build, localhost o SSH no acreditan acceso desde iPad. Sin portal configurado, registrar el bloqueo. No publicar URL privada en este repo ni interpretar esa vista como permiso de publicar código/medios.
+- Cada configuración Playwright usa puerto y carpeta de resultados propios; no borrar trazas de otra ejecución. Para diagnosticar fallos/tiempos en VM, repetir casos afectados con un worker y registrar el timeout utilizado, sin presentarlo como medición de fluidez física.
 
 - Excepciones es una vista derivada del mismo estado, con cartera completa a un toque. Fechas sin hora: días de calendario de Madrid, no horas transcurridas; no inferir vencimientos ausentes ni crear agenda.
 - Si una entidad aparece en varios grupos, capturar origen por ID y contexto de grupo. Al desaparecer una excepción, enfocar un destino visible válido. No enfocar la primera coincidencia de otro grupo.

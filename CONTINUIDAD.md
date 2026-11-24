@@ -1,68 +1,63 @@
 # Centro de mandos · continuidad común
 
-Actualizado: **19/11/2026**. Entrada única de Codex, Claude y el gestor. Actualizar en su sitio; histórico en Git, sin handoffs por versión ni adjuntos para traslado manual.
+Actualizado: **24/11/2026**. Entrada única de Codex, Claude y el gestor. Actualizar en su sitio; histórico en Git, sin handoffs por versión ni adjuntos para traslado manual.
 
 ## Objetivo permanente
 
-Coordinar **todos** los proyectos desde una cartera global: estado, progreso medido, información pendiente, bloqueo, siguiente acción, responsable, fecha y entregables. Tres prioridades complementan la cartera completa. Jenda conserva agenda/horarios. Máxima calidad de movimiento sigue siendo objetivo, sin acreditación física en iPad.
+Coordinar **todos** los proyectos desde una cartera global: estado, progreso medido, información pendiente, bloqueo, siguiente acción, responsable, fecha y entregables. Tres prioridades complementan la cartera completa. Jenda conserva agenda/horarios. Calidad de movimiento sigue siendo objetivo, sin acreditación física en iPad.
 
 ## Fuente y commits
 
-- Repositorio **midememv-sys/Centrodemandos · main**. Al iniciar este incremento se verificó `61904210e10b45b76b3585d682ad04e04baf14bd`. Confirmar siempre el head y commit de este archivo desde GitHub.
-- Fuente activa **local**: `/workspace/centro-github-preparado/web`; Git en su padre, rama `desarrollo/centro-web-local`. **App en `f45ba84a8b69a212ede010c462d200ef5e3bc650`**. Continúa `bd23cbc` / app `9b8b9f0`; no se reinició el producto ni se descartó trabajo anterior.
-- **Código y medios siguen locales, sin publicación ni despliegue.** La autorización continúa pendiente; no reintentar medios rechazados ni interpretar la actualización Markdown como permiso. `desarrollo/centro-web` es una rama remota prevista, no una fuente publicada que se pueda afirmar leída.
-- Registro técnico único: **[FALLOS.md](FALLOS.md)**. E1/E2/S4 corregidos y validados en el alcance indicado. V1 (Safari/iPad físico), V2 (rendimiento objetivo) y R1 (referencia original) continúan abiertos. No P1 de integridad conocido abierto.
+- Repositorio común: **midememv-sys/Centrodemandos · main**. Head comprobado al empezar y antes de actualizar: `6c8658604e70a282837a40ff3d4b22a45fa66a8f`. Consultar el head de este archivo desde GitHub en cada sesión.
+- Fuente activa **local, no publicada**: `/workspace/centro-github-preparado/web`, rama `desarrollo/centro-web-local`, commit **`411f48b79406ca48b44c74f47e2376bc33e40f06`**. Deriva de **`f45ba84a8b69a212ede010c462d200ef5e3bc650`**, conservando el trabajo posterior `ac0959c`. Al iniciar se comprobó que `web/app` coincidía con f45ba84.
+- Nueva preparación: build de revisión sintética aislada y recorrido para iPad. **Dominio, Markdown y motor/animaciones 3D permanecen iguales a f45ba84**; no se añaden efectos. Las correcciones A1/A2/A3 y S4 siguen integradas.
+- Solo continuidad, registro e instrucciones técnicas se comparten en GitHub. Código/medios siguen sin permiso de publicación pública. La vista **privada** sí está autorizada; no autoriza publicar rama, medios, ZIP, dist, node_modules, secretos o documentos operativos. No reintentar la subida pública rechazada.
 
-El repositorio es público. No se añadieron datos personales, secretos o ECC ni se modificaron documentos operativos originales/ESTADO.md. Tampoco se confirmó su frescura. GitHub comparte documentación autorizada; no IndexedDB, conversaciones, memoria o cuota de los chats.
+## Estado real y acceso privado
 
-## Incremento vigente: excepciones
+- `npm run build:review` crea `app/dist-review`; `npm run preview:review` sirve **solo el build** en `0.0.0.0:4179`, con puerto estricto. Servicio iniciado y respuesta HTTP 200 comprobada en el entorno. Peticiones de rutas de fuente/Git devuelven el shell HTML, no archivos del repositorio; host no autorizado devuelve 403.
+- Carga automáticamente **24 proyectos sintéticos** en IndexedDB **`centro-review-f45-v1`**, separada de **`centro-demo-v1`** de la app normal. Primera carga concurrente protegida por revisión atómica; no reemplaza cambios ya guardados. Sin sincronización entre dispositivos.
+- Medir, guardar, deshacer, editar y exportar funcionan en la revisión. Crear/importar/restaurar se omiten en este modo para mantener el escenario sintético; la aplicación normal conserva esos flujos y su almacenamiento. El modo de build **no es autenticación**.
+- **Acceso desde iPad todavía pendiente**: el estado del entorno solo anuncia SSH/22, sin portal HTTP/URL HTTPS. Se solicitó configurar **Edit Environment → HTTP Previews → puerto 4179 → Apply to this chat**. La herramienta no puede añadir puertos. Después hay que consultar/verificar la URL exacta autenticada del propietario; no inventarla ni presentar localhost/SSH como enlace del iPad.
+- Si el portal exige su hostname, reiniciar con `CENTRO_PREVIEW_HOST` igual al hostname exacto devuelto por el entorno. No permitir todos los hosts. No guardar URLs privadas o identificadores del entorno en este repo público. No se abrió túnel ni se desplegó/publicó la aplicación.
 
-Vista derivada del mismo estado, sin nueva fuente canónica:
+## Cartera y excepciones
 
-- Bloqueos registrados, con motivo o indicación de que falta describirlo.
-- Fechas vencidas y vencimientos entre hoy y **+7 días de calendario de Europe/Madrid**, incluidos ambos extremos. Sin fecha no equivale a vencido. Pausar no borra un plazo.
-- Decisiones derivadas de falta de siguiente acción o última evaluación de entregables pendiente/rechazada/con cambios. Se explican los criterios; no se inventan decisiones de negocio.
+Resumen, tres prioridades y cartera completa; acceso a **Excepciones** en encabezados existentes. Bloqueos explícitos, vencidos/hoy/próximos 7 días de Madrid y decisiones por acción ausente o entregable no aceptado. Completados/archivados excluidos. Motivos, fecha, responsable, siguiente paso y medición visibles; rango/cobertura y desconocidos conservados. «Toda la cartera (24)»/Proyectos devuelve todos con un toque, limpiando filtros explícitamente.
 
-Completados y archivados quedan fuera de las excepciones, presentes en la cartera. Motivo, responsable, fecha, siguiente acción y resultado siguen accesibles. Un proyecto puede figurar en varios grupos; el total cuenta proyectos distintos. Buscar filtra la vista; **«Toda la cartera» o Proyectos desde Excepciones recuperan todos en un toque**, incluso con búsqueda activa y scroll.
+Demo: **4 bloqueos, 6 vencimientos, 5 decisiones; 8 proyectos únicos**. Fechas planificadas relativas al primer día de carga, sin refrescar las observaciones originales. Incluye desconocidos, descenso, pausados, entregables rechazados y títulos largos. 3D inicializado solo al abrir un proyecto; una escena activa, alternativa DOM y liberación al cerrar. PWA precarga el asset para funcionar offline, sin inicializar una escena por fila.
 
-Demo opcional en espacio vacío: Excepciones → «Cargar demo de excepciones (24)»; también Ajustes. **24 proyectos, 4 bloqueos, 6 vencimientos, 5 decisiones, 8 proyectos distintos con excepciones.** Fechas relativas de demostración; observaciones conservadas, no actualizadas artificialmente. Si ya hay datos, no los reemplaza; usar otro perfil/origen sin borrar el existente.
+## Verificación nueva · 24/11
 
-El acceso ocupa encabezados existentes para mantener densidad y controles de 44px. El detalle conserva el origen por proyecto **y grupo**, o vuelve a un control visible si la excepción desaparece. Se preservan medición directa, importación reconciliada/idempotente, historial, conflictos, borradores, backup y deshacer. Dominio, cálculo, unidades y zona horaria no se alteraron.
+- **42 TypeScript + 4 Python**, aprobadas. Builds normal/revisión aprobados. Instalación limpia con lockfile y builds: **16 archivos idénticos por SHA-256 en cada salida**. Three.js diferido ≈534 kB minificado/≈142 kB gzip; advertencia conservada, sin dependencia nueva.
+- Build de revisión: **9 E2E aprobadas**, 5 Chromium y 4 WebKit; **1 PWA WebKit omitida**. Primera carga concurrente, aislamiento respecto a base normal, Excepciones → cartera → seleccionar → medir → guardar → recargar → deshacer → foco, toque/teclado/reducir movimiento, fallo de disco y conflicto con borrador conservado. PWA revisión offline comprobada en Chromium.
+- Regresión **selectiva de 50 E2E** de excepciones, escena, integridad e incremento 3: primera ejecución **39 aprobadas, 11 fallidas** (4 errores de trazas compartidas y 7 timeouts de 30s bajo concurrencia). Corregido el instrumental T1: **las 11 afectadas repetidas en serie con timeout 90s, todas aprobadas**. No se repitieron sus 39 aprobadas ni se afirma una ejecución completa de toda la suite en verde.
+- **2 PWA normales Chromium aprobadas** sobre build de producción, con puerto/carpeta propios. Sin reimportación rota, reinterpretación de unidades ni cambios ficticios entre proyectos en los casos regresados.
+- Entorno probado: **Linux headless, Chromium 159 y WebKit 27.2**; anchuras 1366×1024, 1024×1366 y 390px, altura reducida 480px, oscuro/reducido, teclado/ratón/toque emulados. WebKit automatizado **no es Safari del iPad**. Resultados del 19/11 y sus capturas/vídeo son históricos; no presentarlos como prueba física o nueva grabación.
 
-## 3D y fallos corregidos
+**Safari/iPad físico: pendiente, NO ejecutado por falta de acceso.** Precisión táctil, trackpad, teclado virtual, fluidez/fps y foco reales no están validados. No se repitió el perfil RAF; p95 ≈300 ms de VM SwiftShader del 17/11 es histórico, no medida del iPad. V1/V2 siguen abiertos; sin blur completo ni promesas de 60/120 fps. Registro técnico único: [FALLOS.md](FALLOS.md); T1 validado como defecto del instrumental, no de dominio.
 
-Se inicializa una sola escena al abrir un proyecto, ninguna por fila. En desarrollo se comprobó ausencia de canvas/solicitud del motor mientras se consultaban listas; la PWA precarga su asset para offline, sin inicializar la escena.
+## Recorrido y siguiente paso
 
-La regresión de teclado reprodujo un fallo al reunir/desplegar rápido: las etiquetas podían seguir ocultas hasta el próximo frame. **S4:** disponibilidad DOM y estado de animación ahora cambian sincrónicamente; RAF solo representa. Caso determinista de enfocar/seleccionar en el mismo turno aprobado. No se añadieron efectos.
+Habilitar/verificar el portal privado y abrir su URL exacta desde Safari del iPad con la cuenta propietaria. Después:
 
-E1 corrigió la barra adicional que restaba una fila visible; E2 corrigió un contenedor heredado que ocultaba el acceso a 1024px. Se vuelven a mostrar ≥2 filas completas de cartera en horizontal y la acción/medición destacadas en iPhone. Desconocidos, cobertura, estimaciones heredadas y resultados medidos conservan su significado. A1/A2/A3 siguen protegidos.
+1. Resumen → **Excepciones** → **Toda la cartera (24)**.
+2. Abrir **Encuentro de diseño · edición abierta** desde la fila y seleccionar **Inscripciones confirmadas** en la pieza/etiqueta accesible: **42 % / faltan 116**.
+3. Medir **100**, fuente **Prueba sintética iPad**, **Ahora** → confirmar. Tras guardado real: **50 % / faltan 100**.
+4. **Deshacer cambio** → **42 % / faltan 116** → cerrar. Foco y scroll en la misma fila. Recargar y comprobar persistencia. Repetir teclado, reducir movimiento y apertura/cierre rápidos.
 
-## Verificación del 19/11
+Registrar modelo, iPadOS/Safari, fecha/orientación, toque/trackpad, teclado virtual, foco y perfil del dispositivo. Corregir y repetir hallazgos reproducibles **antes de ampliar efectos**. Sin acceso físico, V1 sigue pendiente; no simular una ficha de dispositivo.
 
-- **42 TypeScript + 4 Python**, aprobadas. Build aprobado.
-- Batería **selectiva de 60 E2E**: 58 aprobadas y 2 reprodujeron S4 (mismo caso en ambos motores). Después de corregir: **24 afectadas finales**, 12 Chromium/12 WebKit, todas aprobadas, incluido el caso determinista. No se repitieron las 60 completas ni se suman repeticiones como casos únicos.
-- **2 PWA Chromium** sobre build final, aprobadas. Instalación limpia con lockfile y build en carpeta temporal: **16 archivos de salida idénticos SHA-256**.
-- Toque, ratón/teclado, orientaciones, modo oscuro/reducido, 24 proyectos, títulos largos, búsqueda, foco, medir/guardar/deshacer/recargar, fallos/conflictos, restauración e importar/deshacer/reimportar se comprobaron en emulación Linux. WebKit 27.2 no es Safari físico.
-- Grabación sintética nueva a velocidad normal y capturas preparadas localmente en `web/docs/revision/`, nombres fijos. Los resultados del 17/11 quedan históricos en Git; no se presentan como verificación nueva.
+## Arranque, backup y reversión
 
-**Safari/iPad físico: pendiente, NO ejecutado por falta de acceso.** No se han validado fluidez, precisión táctil, trackpad, teclado virtual ni fps del dispositivo real. No se repitió el perfil RAF: p95 ≈300 ms en VM SwiftShader del 17/11 es histórico, no un resultado del 19/11 ni del iPad. V2 sigue abierto. Sin blur completo ni promesas de 60/120 fps.
+Desde `web/`: Node 22.12+, `npm ci`; app normal `npm run dev -- --port 5177`, `npm run build`; revisión `npm run build:review`, `npm run preview:review`. Ningún secreto obligatorio. PWA normal de pruebas usa 4180 para no reutilizar la revisión de 4179. Guía detallada vigente: web/README.md, DECISIONES.md, DESIGN.md y docs/VERIFICACION.md.
 
-Fuentes locales vigentes: web/README.md, BRIEF.md, DESIGN.md, DECISIONES.md y docs/VERIFICACION.md. Historial/evidencia anterior en Git, sin nuevas memorias.
+Exportar JSON desde Ajustes antes de cambiar origen, navegador o versión. Restaurar backup compatible en otro origen vacío con la app normal y verificar observaciones/unidades/historial. Rollback en checkout separado conservando backup y origen; no reset sobre trabajo posterior ni borrar IndexedDB. `f45ba84`/`ac0959c` conservan la base. Sin nuevos ZIPs, memorias o medios para traslado manual.
 
-## Abrir, recuperar y siguiente paso
+## Protocolo compartido
 
-Desde web/: `npm ci`, `npm run dev -- --host 127.0.0.1 --port 5177`; build con `npm run build`. No secretos ni variables obligatorias. El entorno solo ofrece SSH, **sin URL HTTP de vista previa para iPad**; localhost pertenece al servidor. No se abrió túnel ni se desplegó.
+Leer esta nota y FALLOS desde main y confirmar commit. Un responsable de escritura; paralelo solo con checkout propio. Claude opcional. No cargar notas personales para frontend. IDs externos escapados; unidades no reinterpretadas; cachés proyecto/submeta y origen proyecto/grupo. Animación no gobierna guardado ni disponibilidad. Cada configuración de pruebas usa resultados y puerto propios.
 
-Ajustes → Exportar backup JSON antes de actualizar. Restaurar en origen vacío compatible y verificar unidades/observaciones/historial. Rollback en checkout separado con backup; no hacer reset sobre trabajo posterior ni borrar IndexedDB. `bd23cbc` conserva la entrega anterior, `8386748` los arreglos de integridad sin 3D. Visual7 original se conserva pero contiene fallos ya corregidos.
+R1 conserva pendiente `ScreenRecording_11-17-2026 09-20-53_1.mp4` (~8,47s) e imágenes originales; no se afirma inspección. Nuestro vídeo no es esa referencia. Sin backend, sincronización, Hermes, runners, agenda nueva, pagos o IA para consultar/editar/calcular.
 
-**Siguiente paso concreto:** ejecutar sobre esta app y demo de 24 el recorrido Safari/iPad **abrir → seleccionar → medir 84→100/200 → guardar 50 %/faltan 100 → deshacer 42 %/faltan 116 → cerrar al mismo grupo**. Registrar modelo, iPadOS/Safari, orientación, foco, precisión táctil/trackpad y perfil del dispositivo; corregir hallazgos antes de efectos nuevos. V1 define el cierre. Acceso al dispositivo pendiente, sin pedir a Bruno otro traslado de archivos.
-
-R1 conserva pendiente `ScreenRecording_11-17-2026 09-20-53_1.mp4` (~8,47s) e imágenes originales. No se afirma haberlos observado ni contrastado de nuevo; la descripción del gestor no demuestra tiempo real. Nuestro vídeo no es esa referencia. Sin backend, sincronización, Hermes, runners, agenda nueva, servicios de pago o IA para consultar/editar/calcular.
-
-## Protocolo y acceso compartido
-
-Leer esta nota y FALLOS desde main y confirmar commit en cada sesión. Si no se dispone de fuente local, declararlo; el código no está publicado. Un responsable de escritura; paralelo solo con checkout/rama propios. Claude opcional. No cargar diarios/log completo o notas personales para frontend.
-
-Escapar valores externos en HTML o usar DOM/dataset, CSS.escape solo selectores. No reinterpretar unidades observadas; conversión explícita pendiente. Cachés de submeta por proyecto/submeta, origen por proyecto/grupo. Animaciones no gobiernan guardado ni disponibilidad de controles. Actualizar archivos vigentes y retirar solo generados propios; no ZIP, dist, node_modules, secretos o capturas descartadas en Git.
-
-ChatGPT gestor: Ajustes → Apps/Plugins → GitHub → autorizar midememv-sys/Centrodemandos y leer esta nota desde main. En GPT personalizado, habilitar Apps si su configuración lo permite; si no, usar un chat normal compatible. Conocimiento subido es una copia estática. No pegar tokens ni cambiar visibilidad. La centralización Markdown no autoriza publicar código/medios, desplegar o activar gasto.
+ChatGPT gestor: Ajustes → Apps/Plugins → GitHub → autorizar midememv-sys/Centrodemandos y leer esta nota desde main. En GPT personalizado, habilitar Apps si lo permite; si no, usar chat compatible. Conocimiento subido es copia estática. La continuidad Markdown pública no vuelve accesible el código local ni autoriza publicarlo.

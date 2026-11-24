@@ -25,9 +25,11 @@ Actualizado 19/11/2026. Estados: abierto → corregido en código → validado. 
 
 ## V1 · Safari/iPad físico · abierto (pendiente de acceso)
 
-- Comprobación de acceso: 19/11/2026. Solo entorno Linux y navegadores headless; no hay iPad físico/Safari conectado ni portal HTTP del entorno. **La prueba física solicitada no se ejecutó**.
-- Recorrido que falta: con 24 proyectos sintéticos, abrir desde Excepciones → seleccionar submeta → medir 84→100 de 200 → confirmar 50 %/faltan 100 → deshacer a 42 %/faltan 116 → cerrar al mismo control/grupo. Probar toque/trackpad reales, precisión, fluidez, teclado virtual, orientación y foco.
-- Cierre: registrar modelo de iPad, iPadOS/Safari, fecha, viewport, resultado del recorrido y perfil del dispositivo; corregir hallazgos antes de efectos nuevos. Chromium/WebKit y toque emulados no cierran V1. Las comprobaciones anteriores de emulación conservan su alcance.
+- Comprobación de acceso: **24/11/2026**. Entorno Linux; no hay iPad físico/Safari conectado. La prueba física solicitada **no se ejecutó**. El propietario autorizó una vista privada, no publicación pública.
+- Preparación: build de revisión derivado de f45ba84, 24 proyectos sintéticos con base IndexedDB aislada, servicio compilado en 0.0.0.0:4179. La consulta del entorno solo anuncia SSH/22: **falta configurar HTTP Previews 4179 → Apply to this chat**. La herramienta no añade ese puerto; no hay URL HTTPS que se pueda entregar todavía. No se abrió túnel ni se publicó el código.
+- Recorrido preparado: Excepciones → Toda la cartera (24) → Encuentro de diseño → Inscripciones confirmadas → medir 84→100 de 200 → confirmar 50 %/faltan 100 → deshacer 42 %/faltan 116 → cerrar a la misma fila. También variante de origen en cada grupo. Instrucciones en web/README.md; guardar conserva datos al recargar y deshacer conserva historial.
+- Pruebas físicas pendientes: precisión de toque/trackpad, fluidez, teclado virtual, orientación y retorno del foco. La altura reducida y el toque/teclado en Chromium/WebKit Linux son emulación, no cierran V1.
+- Criterio de cierre: habilitar/verificar URL autenticada del propietario y acceso desde Safari; registrar modelo, iPadOS/Safari, fecha/orientación y resultados reales. Corregir/repetir fallos reproducibles antes de efectos. No registrar URLs privadas o identificadores del entorno en el repo público.
 
 ## R1 · Referencia ausente · abierto
 
@@ -82,3 +84,11 @@ No se localiza `ScreenRecording_11-17-2026 09-20-53_1.mp4` (≈8,47s) ni imágen
 - Causa: clase de disponibilidad de controles actualizada al dibujar un frame en lugar de al cambiar el estado. Disponibilidad DOM y frame podían discrepar. El indicador diagnóstico de animación también podía conservar el valor del frame anterior.
 - Corrección integrada: clase de visibilidad y estado diagnóstico de animación se actualizan sincrónicamente con la intención, reservando RAF para representación. Sin cambiar medidas, progreso ni añadir efectos.
 - Regresión: scene.spec.ts «mismo turno, sin esperar un frame» ejecuta despliegue/foco dentro de un único turno JS; falló antes de corregir. La batería selectiva de 60 también reprodujo el fallo en ambos motores (58 aprobadas, 2 fallidas). Cierre funcional satisfecho: 24 casos afectados finales aprobados en Chromium/WebKit, incluido el caso determinista. No se repitieron las 60 completas tras esta corrección. V1/V2 físicos siguen pendientes.
+
+## T1 · P3 · Colisión de artefactos de pruebas · validado
+
+- Tipo: fallo reproducido del instrumental de pruebas, no del guardado de la aplicación.
+- Reproducción 24/11: ejecutar configuraciones Playwright de revisión/PWA y E2E a la vez con la carpeta predeterminada `test-results`. Al arrancar, una borraba las trazas activas de otra; cierre de contexto fallaba con ENOENT. La concurrencia también coincidió con vencimientos del timeout de 30s en WebKit/VM.
+- Causa/corrección: configuraciones compartían salida y PWA/revisión reutilizaban puerto 4179. Ahora revisión usa `test-results-review`/4179, PWA `test-results-pwa`/4180, y E2E su salida/5177. PWA exige puerto libre. Revisión/PWA usan un worker; repetir diagnóstico ampliado en serie con timeout explícito, sin cambiar duraciones de animación ni cálculos.
+- Regresión: 9 casos de revisión aprobados (1 PWA WebKit omitido), 11 E2E afectados repetidos en serie/timeout 90s, todos aprobados. PWA normal se comprueba con su carpeta/puerto separados. La batería inicial selectiva de 50 tuvo 39 aprobados, 4 errores de trazas y 7 timeouts; no se presenta como ejecución completa aprobada. No se repitieron sus 39 aprobados.
+- Límite: estas comprobaciones no miden fluidez física. Cierre del defecto de instrumental satisfecho: repeticiones sin ENOENT con carpetas/puertos separados. Las limitaciones de tiempo en VM se diagnostican sin concurrencia; no se atribuyen a un dispositivo físico. V1/V2 permanecen abiertos.
