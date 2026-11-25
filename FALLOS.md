@@ -25,11 +25,12 @@ Actualizado 19/11/2026. Estados: abierto → corregido en código → validado. 
 
 ## V1 · Safari/iPad físico · abierto (pendiente de acceso)
 
-- Comprobación de acceso: **25/11/2026**. Entorno Linux; no hay iPad físico/Safari conectado. La prueba física solicitada **no se ejecutó**. El propietario autorizó una vista privada, no publicación pública. Al retomar se encontró 4179 sin escucha; reiniciar el mismo build 411f48b recuperó HTTP 200. El entorno sigue anunciando solo SSH/22: no hay enlace HTTP privado. Sin pruebas de navegador nuevas ni cambio del resultado físico pendiente.
-- Preparación: build de revisión derivado de f45ba84, 24 proyectos sintéticos con base IndexedDB aislada, servicio compilado en 0.0.0.0:4179. La consulta del entorno solo anuncia SSH/22: **falta configurar HTTP Previews 4179 → Apply to this chat**. La herramienta no añade ese puerto; no hay URL HTTPS que se pueda entregar todavía. No se abrió túnel ni se publicó el código.
-- Recorrido preparado: Excepciones → Toda la cartera (24) → Encuentro de diseño → Inscripciones confirmadas → medir 84→100 de 200 → confirmar 50 %/faltan 100 → deshacer 42 %/faltan 116 → cerrar a la misma fila. También variante de origen en cada grupo. Instrucciones en web/README.md; guardar conserva datos al recargar y deshacer conserva historial.
-- Pruebas físicas pendientes: precisión de toque/trackpad, fluidez, teclado virtual, orientación y retorno del foco. La altura reducida y el toque/teclado en Chromium/WebKit Linux son emulación, no cierran V1.
-- Criterio de cierre: habilitar/verificar URL autenticada del propietario y acceso desde Safari; registrar modelo, iPadOS/Safari, fecha/orientación y resultados reales. Corregir/repetir fallos reproducibles antes de efectos. No registrar URLs privadas o identificadores del entorno en el repo público.
+- Comprobación 25/11: solo entorno Linux, sin iPad/Safari físico conectado. Cloud anuncia SSH/22 pero no portal HTTP. Un HTTP 200 interno no demuestra acceso desde el iPad. **La prueba física no se ha ejecutado**.
+- Alternativa autorizada y preparada: carpeta local `web/preview-lan`, demo base 411f48b con compatibilidad HTTP y corrección L2, 24 proyectos sintéticos, Python 3.9+ sin paquetes, servidor limitado por manifiesto/hashes. Instrucciones en README y LEEME generado. Código/build siguen sin publicarse.
+- Falta **copiar la carpeta por un canal privado al ordenador de la Wi-Fi**, arrancar `python3 servir.py --bind IP_WIFI` y abrir `http://IP_WIFI:4179` en Safari del iPad. IP_WIFI es la del ordenador, no la de Cloud ni localhost. No se ha validado la transferencia ni la conexión entre dispositivos. SSH anunciado no acredita una sesión de copia utilizable; no se facilitaron claves/fingerprints inventados.
+- Recorrido: Excepciones → Toda la cartera (24) → Encuentro de diseño → Inscripciones confirmadas → medir 84→100/200 → confirmar 50 %/faltan 100 → deshacer 42 %/faltan 116 → cerrar a la misma fila y recargar. Probar toque/trackpad, teclado virtual, orientación y foco reales.
+- HTTP LAN no tiene autenticación ni PWA offline garantizada; solo demo sintética en Wi-Fi de confianza, sin puertos de router abiertos. Mantener el ordenador conectado. Datos locales en Safari, sin sincronización; exportar antes de cambiar de origen/IP.
+- Cierre: registrar modelo, iPadOS/Safari, fecha/orientación y resultado físico del recorrido, precisión, teclado, foco y rendimiento. Corregir/repetir fallos observados antes de efectos. Emulación/relay HTTP no cierran V1 ni V2. No guardar direcciones privadas del entorno en GitHub.
 
 ## R1 · Referencia ausente · abierto
 
@@ -92,3 +93,18 @@ No se localiza `ScreenRecording_11-17-2026 09-20-53_1.mp4` (≈8,47s) ni imágen
 - Causa/corrección: configuraciones compartían salida y PWA/revisión reutilizaban puerto 4179. Ahora revisión usa `test-results-review`/4179, PWA `test-results-pwa`/4180, y E2E su salida/5177. PWA exige puerto libre. Revisión/PWA usan un worker; repetir diagnóstico ampliado en serie con timeout explícito, sin cambiar duraciones de animación ni cálculos.
 - Regresión: 9 casos de revisión aprobados (1 PWA WebKit omitido), 11 E2E afectados repetidos en serie/timeout 90s, todos aprobados. PWA normal se comprueba con su carpeta/puerto separados. La batería inicial selectiva de 50 tuvo 39 aprobados, 4 errores de trazas y 7 timeouts; no se presenta como ejecución completa aprobada. No se repitieron sus 39 aprobados.
 - Límite: estas comprobaciones no miden fluidez física. Cierre del defecto de instrumental satisfecho: repeticiones sin ENOENT con carpetas/puertos separados. Las limitaciones de tiempo en VM se diagnostican sin concurrencia; no se atribuyen a un dispositivo físico. V1/V2 permanecen abiertos.
+
+## L1 · P2 · La demo no arranca en HTTP de una IP LAN · validado
+
+- Reproducción 25/11: abrir build 411f48b en origen HTTP no seguro. `crypto.randomUUID` no existe; al inicializar demo se muestra error de lectura de almacenamiento y cero proyectos. Reproducido en Chromium con origen HTTP real no seguro y relay local de peticiones, no dispositivo físico.
+- Causa/corrección: uid dependía exclusivamente de randomUUID (API de contexto seguro). Añadido UUID v4 con getRandomValues cuando falta esa API; no cambiar IDs existentes ni usar aleatoriedad débil. Registrar service worker solo en contexto seguro; aclarar límites HTTP. Cálculos y esquema intactos.
+- Regresión: nuevo caso UUID/1000 identidades, carga de 24 y medir/guardar/deshacer/recargar bajo HTTP sin randomUUID en Chromium/WebKit. Registros en docs/VERIFICACION.md. No se anuncia compatibilidad HTTP del importador normal que requiere crypto.subtle; esta vista es sintética con importación deshabilitada.
+- Cierre funcional: arranque/edición HTTP aprobados. Límite V1: Safari físico y red Wi-Fi reales pendientes.
+
+## L2 · P2 · Close nativo anterior cancela una escena reabierta · validado
+
+- Reproducción observada 25/11: abrir/Escape varias veces con movimiento reducido y volver a abrir; Chromium queda más de 20s en «Preparando vista 3D». Batería HTTP inicial: 5 aprobadas, 1 fallida; no se presenta como aprobada.
+- Causa: close se entrega en una tarea posterior; al reutilizar el mismo dialog, el evento anterior consumía el cleanup del montaje nuevo y el retorno de foco. Los listeners de docking/feedback también podían sobrevivir a otra apertura.
+- Corrección: ignorar close mientras el diálogo ya está abierto, AbortController por ciclo para desmontar listeners, borrado de escena solo por identidad de su cleanup y docking liberado por ese ciclo. Feedback con limpieza por diálogo. No cambiar duración ni añadir efectos.
+- Regresión: caso de tres close/reaperturas dentro del mismo turno JS, recorrido con teclado/reducir movimiento y foco al origen; batería HTTP final de 8 aprobada en Chromium/WebKit. Regresión selectiva de escena: 12 aprobadas en ambos motores; 2 PWA normales aprobadas. Sin atribuir ejecución física.
+- Cierre funcional: carga final, una escena, cierre/foco y edición comprobados. Límite V1/V2: fluidez, precisión táctil y teclado virtual del dispositivo real sin validar.

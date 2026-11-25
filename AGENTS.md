@@ -1,4 +1,4 @@
-# Coordinación vigente · 24/11/2026
+# Coordinación vigente · 25/11/2026
 
 Lee primero [CONTINUIDAD.md](CONTINUIDAD.md) desde main: es la única nota de desarrollo vigente y distingue lo compartido en GitHub de lo preparado localmente. Sustituir su estado al actualizar; histórico en Git, sin nuevas memorias duplicadas ni adjuntos que Bruno deba transferir.
 
@@ -9,13 +9,15 @@ Las reglas validadas del prototipo (parcial desconocido, rango/cobertura, sin gl
 
 ## Prevención técnica vigente
 
-- Vista privada de revisión autorizada: solo datos sintéticos, build compilado y base aislada. La privacidad corresponde al portal HTTP autenticado del entorno; un modo de build, localhost o SSH no acreditan acceso desde iPad. Sin portal configurado, registrar el bloqueo. No publicar URL privada en este repo ni interpretar esa vista como permiso de publicar código/medios.
+- Vista de revisión autorizada: solo datos sintéticos, build compilado y base aislada. En Cloud, la privacidad corresponde al portal HTTP autenticado del entorno; un modo de build, localhost o SSH no acreditan acceso desde iPad. Sin portal configurado, registrar el bloqueo Cloud. Alternativa LAN autorizada: servidor estático en la IP Wi-Fi del ordenador, solo demo, sin autenticación ni promesa de PWA/offline en HTTP. No afirmar copia o conexión física si no se han realizado. No publicar URL privada en este repo ni interpretar esa vista como permiso de publicar código/medios.
 - Cada configuración Playwright usa puerto y carpeta de resultados propios; no borrar trazas de otra ejecución. Para diagnosticar fallos/tiempos en VM, repetir casos afectados con un worker y registrar el timeout utilizado, sin presentarlo como medición de fluidez física.
 
 - Excepciones es una vista derivada del mismo estado, con cartera completa a un toque. Fechas sin hora: días de calendario de Madrid, no horas transcurridas; no inferir vencimientos ausentes ni crear agenda.
 - Si una entidad aparece en varios grupos, capturar origen por ID y contexto de grupo. Al desaparecer una excepción, enfocar un destino visible válido. No enfocar la primera coincidencia de otro grupo.
 - No colocar controles en contenedores que se ocultan como metadatos. Conservar densidad y objetivos táctiles al añadir navegación; comprobar ambas orientaciones y ≥2 filas de cartera de referencia en horizontal.
 - La disponibilidad/foco de controles debe seguir el estado de forma inmediata; no esperar al frame de una animación para volverlos accionables.
+- Regresar HTTP en origen no seguro (localhost no sirve para este caso): randomUUID y service worker pueden faltar. UUID alternativo solo con getRandomValues, nunca Math.random/fecha. No alterar resultados para adaptar el transporte.
+- El evento close nativo llega encolado: ignorarlo si el diálogo ya está abierto de nuevo. Limpiar listeners/escena por ciclo y por identidad de montaje; regresar reapertura en el mismo turno, teclado, foco y reducir movimiento.
 
 - Leer [FALLOS.md](FALLOS.md), registro técnico único. No añadir efectos mientras haya P1 de integridad abiertos. Distinguir defecto, mejora y verificación pendiente; cada corrección lleva reproducción/regresión y estado respaldado por ejecución.
 - HTML de valores externos: escape en texto/atributos o propiedades DOM/dataset; CSS.escape solo para selectores. No suponer UUID ni usar IDs como marcado.
