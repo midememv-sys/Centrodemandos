@@ -25,7 +25,7 @@ Actualizado 19/11/2026. Estados: abierto → corregido en código → validado. 
 
 ## V1 · Safari/iPad físico · abierto (pendiente de acceso)
 
-- Comprobación de acceso: **24/11/2026**. Entorno Linux; no hay iPad físico/Safari conectado. La prueba física solicitada **no se ejecutó**. El propietario autorizó una vista privada, no publicación pública.
+- Comprobación de acceso: **25/11/2026**. Entorno Linux; no hay iPad físico/Safari conectado. La prueba física solicitada **no se ejecutó**. El propietario autorizó una vista privada, no publicación pública. Al retomar se encontró 4179 sin escucha; reiniciar el mismo build 411f48b recuperó HTTP 200. El entorno sigue anunciando solo SSH/22: no hay enlace HTTP privado. Sin pruebas de navegador nuevas ni cambio del resultado físico pendiente.
 - Preparación: build de revisión derivado de f45ba84, 24 proyectos sintéticos con base IndexedDB aislada, servicio compilado en 0.0.0.0:4179. La consulta del entorno solo anuncia SSH/22: **falta configurar HTTP Previews 4179 → Apply to this chat**. La herramienta no añade ese puerto; no hay URL HTTPS que se pueda entregar todavía. No se abrió túnel ni se publicó el código.
 - Recorrido preparado: Excepciones → Toda la cartera (24) → Encuentro de diseño → Inscripciones confirmadas → medir 84→100 de 200 → confirmar 50 %/faltan 100 → deshacer 42 %/faltan 116 → cerrar a la misma fila. También variante de origen en cada grupo. Instrucciones en web/README.md; guardar conserva datos al recargar y deshacer conserva historial.
 - Pruebas físicas pendientes: precisión de toque/trackpad, fluidez, teclado virtual, orientación y retorno del foco. La altura reducida y el toque/teclado en Chromium/WebKit Linux son emulación, no cierran V1.

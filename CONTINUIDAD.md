@@ -1,6 +1,6 @@
 # Centro de mandos · continuidad común
 
-Actualizado: **24/11/2026**. Entrada única de Codex, Claude y el gestor. Actualizar en su sitio; histórico en Git, sin handoffs por versión ni adjuntos para traslado manual.
+Actualizado: **25/11/2026**. Entrada única de Codex, Claude y el gestor. Actualizar en su sitio; histórico en Git, sin handoffs por versión ni adjuntos para traslado manual.
 
 ## Objetivo permanente
 
@@ -8,13 +8,14 @@ Coordinar **todos** los proyectos desde una cartera global: estado, progreso med
 
 ## Fuente y commits
 
-- Repositorio común: **midememv-sys/Centrodemandos · main**. Head comprobado al empezar y antes de actualizar: `6c8658604e70a282837a40ff3d4b22a45fa66a8f`. Consultar el head de este archivo desde GitHub en cada sesión.
+- Repositorio común: **midememv-sys/Centrodemandos · main**. Head comprobado al retomar el 25/11: `3a58292f72c81b03b220600750ec67a2415e1095`. Consultar el head de este archivo desde GitHub en cada sesión.
 - Fuente activa **local, no publicada**: `/workspace/centro-github-preparado/web`, rama `desarrollo/centro-web-local`, commit **`411f48b79406ca48b44c74f47e2376bc33e40f06`**. Deriva de **`f45ba84a8b69a212ede010c462d200ef5e3bc650`**, conservando el trabajo posterior `ac0959c`. Al iniciar se comprobó que `web/app` coincidía con f45ba84.
 - Nueva preparación: build de revisión sintética aislada y recorrido para iPad. **Dominio, Markdown y motor/animaciones 3D permanecen iguales a f45ba84**; no se añaden efectos. Las correcciones A1/A2/A3 y S4 siguen integradas.
 - Solo continuidad, registro e instrucciones técnicas se comparten en GitHub. Código/medios siguen sin permiso de publicación pública. La vista **privada** sí está autorizada; no autoriza publicar rama, medios, ZIP, dist, node_modules, secretos o documentos operativos. No reintentar la subida pública rechazada.
 
 ## Estado real y acceso privado
 
+- Comprobación **25/11**: al retomar, 4179 no escuchaba; se reinició el servicio del mismo build de revisión **411f48b** y volvió a responder **HTTP 200**. Sin cambios de código ni nuevas pruebas de navegador. La consulta actual del entorno sigue mostrando **solo SSH/22**, sin enlace HTTP. Acceso y prueba física continúan pendientes; el estado de un servidor de una sesión anterior debe verificarse de nuevo.
 - `npm run build:review` crea `app/dist-review`; `npm run preview:review` sirve **solo el build** en `0.0.0.0:4179`, con puerto estricto. Servicio iniciado y respuesta HTTP 200 comprobada en el entorno. Peticiones de rutas de fuente/Git devuelven el shell HTML, no archivos del repositorio; host no autorizado devuelve 403.
 - Carga automáticamente **24 proyectos sintéticos** en IndexedDB **`centro-review-f45-v1`**, separada de **`centro-demo-v1`** de la app normal. Primera carga concurrente protegida por revisión atómica; no reemplaza cambios ya guardados. Sin sincronización entre dispositivos.
 - Medir, guardar, deshacer, editar y exportar funcionan en la revisión. Crear/importar/restaurar se omiten en este modo para mantener el escenario sintético; la aplicación normal conserva esos flujos y su almacenamiento. El modo de build **no es autenticación**.
